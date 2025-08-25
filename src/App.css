@@ -1,38 +1,158 @@
-.App {
-  text-align: center;
+header {
+  background-color: #f2efdd;
+  color: #3f0b1d;
+  padding: 10px;
+  height:fit-content;
+}
+.Logo {
+    /* margin-left:45%; */
+    /* margin-right: auto; */
+   height: 35px;
+   width: auto;
+}
+ul {
+  padding: 0;
+}
+ul li {
+ list-style-type: none;
+ 
+}
+ul li a{
+  color:#3f0b1d ;
+  text-decoration: none;
+  font-size:18px;
+  display: block;
+  padding: 10px 15px;
+  border-radius: 6px;
+}
+ul li a:hover{
+  color: blue;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+ul li a:active {
+  left:0
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.sidenav {
+  width:350px;
+  background-color: #f2efdd;
+  position:absolute;
+  font-family: sans-serif;
+  font-size: 18px;
+  font-weight:400;
+  color: #3f0b1d;
+  height: 100vh;
+  padding:20px 40px;
+  transition: all 1s;
+  z-index: 1;
+}
+.sidenav.active {
+  left: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header svg {
+  font-size: 40px;
+}
+/* .main {
+  padding: 100px;
+  color: aqua;
+} */
+
+ul.thumbs.animated{
+  display: none !important;
+}
+.main {
+  padding: none !important;
+  display: none;
+}
+.title {
+  color:#3D081B;
+  font-family:sans-serif;
+  font-size: 40px;
+  
+}
+.slider-counter__link--dots .dot {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    border: .1rem solid rgba(var(--color-foreground), .5);
+    padding: 0;
+    display: block;
+}
+.card {
+  /* display: flex;
+  justify-content: center; */
+  padding: 0%;
+  height:fit-content;
+  width:350px;
+  margin:10px;
+  margin-left: 12px;
+  margin-right: 12px;
+  border: 0;
+}
+.ProductName {
+  font-family: Proza Libre;
+  font-size: 16px;
+  color: #3D081B;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.ProductPrice {
+padding-bottom: 10px;
+font-size: 16px;
+color: #3D081B;
+}
+.button {
+  padding: 10px;
+  margin-bottom: 10px;
+  border:0.2rem solid #3D081B;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border-radius: 40px;
+  padding-left: 131px;
+  padding-right: 131px;
 }
-
-.App-link {
-  color: #61dafb;
+.gx-7{
+  --bs-gutter-x: 7rem;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Subtitle {
+  color:#1f2937 ;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  font-size: 22.5px;
+  margin-bottom: 20px;
+}
+.Brief{
+  color:#4B5563;
+  font-size: 13.25px;
+  text-align: center;
+  display: flex;
+  margin-left: 36%;
+  margin-right: 36%;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.value{
+  border:1px solid grey;
+  border-radius: 5px;
+  text-align: center;
+  margin-left: 10px;
+  width: 350px;
+  padding: 8px;
+  transition: transform 0.3s ease-in-out; 
+  box-shadow: 0.3s ease-in-out;
+  background-color: #ffffff;
+}
+.ValueDetails{
+  font-size: 8.75px;
+  padding-top: 3px;
+}
+.ValueName{
+  font-size: 12.5px;
+  padding: 5px;
+}
+.vector{
+  height: 50px !important;
+  width:auto !important;
 }

@@ -1,0 +1,47 @@
+const gkCheckoutBtnCss=`
+.gokwik-checkout-button {
+  padding: 12px 1rem;
+  width: 100%;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
+}
+
+.gokwik-checkout-button:hover {
+  transform: scale(1.02);
+}
+.gokwik-checkout-button:focus {
+  outline: 1px solid #ffffff;
+  outline-offset: 2px;
+}
+.gokwik-checkout-button:active {
+  transform: scale(0.98);
+}
+.cart-drawer-btn-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-drawer-btn-text > span:last-child {
+  padding-top: 2px;
+  font-size: 10px;
+  line-height: 10px;
+  text-transform: initial;
+}
+
+.cart-drawer-btn-text > span:first-child {
+  font-size: 16px;
+}
+
+.pay-opt-icon img:first-child {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+`;function injectStyles(e){var t=document.createElement("style");t.innerHTML=e,document.head.appendChild(t)}injectStyles(gkCheckoutBtnCss);const uniqueSelectors={parent:{elementName:["cart-drawer"],id:["modals-rightDrawer","CartDrawer","mini-cart","cart-drawer","CartDrawerForm","cart-drawer-container","shopify-section-cart-drawer","MinimogCartDrawer"],class:["cart__drawer-form","rebuy-cart__flyout","drawer--right","drawer__footer","cart-drawer","mini-cart__drawer-footer","hs-drawer-checkout","cart-drawer__footer","t4s-drawer__right","upcart-footer","upcart-checkout-button-container"],data:["data-type=cart","data-cart-footer","data-cart-wrapper"]},button:{elementName:[],id:["CartDrawer-Checkout","cart-drawer-checkout","proceed-checkout-btn"],class:["cart__checkout-button","checkout-button","cart__checkout","btn-checkout","hs-checkout-purchase","scd__checkout"],name:["checkout"],data:["data-ocu-checkout=true"]}};function findElementsBySelectors(e,t=document){var r,a,o=[];for([r,a]of Object.entries(e))for(const c of a){let e;switch(r){case"elementName":e=t.querySelectorAll(c);break;case"id":e=t.querySelectorAll("#"+c);break;case"class":e=t.querySelectorAll("."+c);break;case"name":e=t.querySelectorAll(`[name="${c}"]`);break;case"data":e=t.querySelectorAll(`[${c}]`)}e&&0<e.length&&o.push({value:c,elements:e[0]})}return o}function replaceCheckoutButtonsWithGk(){var e=localStorage.getItem("gkCheckoutSelector"),t=localStorage.getItem("gkCartDrawerSelector");let r;if(e&&t&&(t=document.querySelectorAll(t),r=t[0]?.querySelectorAll(e)),!r||0===r?.length){t=findCartDrawerParent();if(!t)return;0<(r=findCheckoutButtons(t)).length&&(e=r[0]?.value)&&localStorage.setItem("gkCheckoutSelector",e)}r?.forEach(e=>{var t=window.gkcCartDrawerConfig,r=document.createElement("button"),a=(r.className="gokwik-checkout-button dynamic-checkout-button",r.type="button",r.setAttribute("onclick","initiateLogin()"),document.createElement("span")),o=(a.className="cart-drawer-btn-text",document.createElement("span"));o.textContent=t?.buttonText,a.appendChild(o),t?.buttonSubtext&&((o=document.createElement("span")).textContent=t.buttonSubtext,a.appendChild(o)),r.appendChild(a),"true"===t?.showPaymentImage&&((o=document.createElement("span")).className="pay-opt-icon",(a=document.createElement("img")).src="https://cdn.gokwik.co/v4/images/upi-icons.svg",a.alt="Payment Icons",o.appendChild(a),r.appendChild(o)),e?.elements?.replaceWith(r)})}function findCartDrawerParent(){var e=findElementsBySelectors(uniqueSelectors.parent);return 0<e.length?(localStorage.setItem("gkCartDrawerSelector",e[0]?.value),e[0]?.elements):(e=document.querySelector("form[action='/cart']:not([action*='/cart/add'])"))?(localStorage.setItem("gkCartDrawerSelector","form[action='/cart']:not([action*='/cart/add'])"),e):(e=document.querySelector("[id*='cart-drawer'], [class*='cart-drawer'], cart-drawer"))?(localStorage.setItem("gkCartDrawerSelector","[id*='cart-drawer'], [class*='cart-drawer'], cart-drawer"),e):null}function findCheckoutButtons(e){let t=[];return 0<(t=findElementsBySelectors(uniqueSelectors.button,e))?.length||e.querySelectorAll("button[href='/checkout'], a[href='/checkout']").forEach(e=>{t.push({value:"button[href='/checkout'], a[href='/checkout']",elements:e})}),t}function observeCartDrawerChanges(){var e=findCartDrawerParent();e&&new MutationObserver(()=>{replaceCheckoutButtonsWithGk()}).observe(e,{childList:!0,subtree:!0})}function observeCartAddition(){new PerformanceObserver(e=>{for(const a of e.getEntries()){var t=["xmlhttprequest","fetch"].includes(a.initiatorType),r=/\/cart\/add(\.js)?$/.test(a.name);t&&r&&a.responseEnd&&replaceCheckoutButtonsWithGk()}}).observe({entryTypes:["resource"]})}observeCartAddition(),replaceCheckoutButtonsWithGk(),observeCartDrawerChanges();
