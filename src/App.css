@@ -1,3 +1,4 @@
+
 header {
   background-color: #f2efdd;
   color: #3f0b1d;
@@ -5,7 +6,7 @@ header {
   height:fit-content;
 }
 .Logo {
-    /* margin-left:45%; */
+    margin-left:45%;
     /* margin-right: auto; */
    height: 35px;
    width: auto;
@@ -89,6 +90,7 @@ ul.thumbs.animated{
   margin-left: 12px;
   margin-right: 12px;
   border: 0;
+ 
 }
 .ProductName {
   font-family: Proza Libre;
@@ -155,4 +157,14 @@ color: #3D081B;
 .vector{
   height: 50px !important;
   width:auto !important;
+}
+button{
+  background-color: #db7607;
+  color: white;
+  font-weight: bold;
+  margin:20px;
+  border-radius: 30px;
+  border: #db7607;
+  padding: 10px;
+  font-size: 16px;
 }

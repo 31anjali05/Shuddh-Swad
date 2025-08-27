@@ -8,11 +8,14 @@ const Cards = ({ product, name, price, prevPrice }) => {
       <div className="col-3 card" onClick={() => onClickItem(name)}>
         <img
           src={product}
-          style={{ width: "auto", height: "447px" }}
+          style={{ width: "auto", height: "447px", borderRadius: "10px" }}
           alt={name}
           className="Product"
         />
-        <div className="container" style={{ padding: "0" }}>
+        <div
+          className="container"
+          style={{ backgroundColor: "#f2efdd", padding: "0" }}
+        >
           <h4>
             <div className="ProductName">{name}</div>
             <div className="ProductPrice">

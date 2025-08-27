@@ -157,23 +157,59 @@ function App() {
               </div>
             </div>
           </div>
-          <div style={{ padding: "50px", backgroundColor: "#fcf8f3" }}>
+          <div
+            style={{
+              padding: "50px",
+              backgroundColor: "#fcf8f3",
+              // borderBottomColor: "#f3c716ff",
+              // borderBottomWidth: "15px",
+            }}
+          >
             <strong
               style={{
                 color: "#a13d1c",
-                fontSize: "45px",
+                fontSize: "50px",
                 fontFamily: "Merriweather",
               }}
             >
               The Shuddh Swad Story
             </strong>
-            <div style={{ fontSize: "15px", color: "#a13d1c" }}>
+            <div
+              style={{
+                fontSize: "15px",
+                color: "#a13d1c",
+                paddingLeft: "38%",
+                paddingRight: "38%",
+              }}
+            >
               A journey of passion, purity, and the pursuit of an Indian dream.
             </div>
           </div>
+          <hr
+            style={{
+              color: "#f3d355ff",
+              opacity: "2px",
+              margin: "0px",
+            }}
+          />
           <div style={{ padding: "50px", backgroundColor: "#fbf9f6" }}>
-            <div>Our Mission</div>
-            <div>
+            <div
+              style={{
+                color: "#b95000",
+                fontSize: "22.5px",
+                fontFamily: "Merriweather",
+                fontWeight: "bold",
+              }}
+            >
+              Our Mission
+            </div>
+            <div
+              style={{
+                fontSize: "14px",
+                paddingLeft: "34%",
+                paddingRight: "34%",
+              }}
+            >
               To be India's finest snacks brand, delivering high-quality,
               hygienic, and affordable traditional snacks that you can trust and
               enjoy, any day of the year. We are not just selling snacks; we are
@@ -181,25 +217,65 @@ function App() {
             </div>
           </div>
           <div style={{ padding: "50px", backgroundColor: "#ffffff" }}>
-            <div>THE BEGINNING</div>
-            <div>The Spark of an Idea</div>
-            <p>
-              The journey of Shuddh Swad began with a powerful, personal
-              experience. Our 16-year-old founder's simple desire for a local
-              thekua turned into a harsh lesson on food hygiene. This single
-              incident sparked a powerful question: Why can't traditional snacks
-              be both delicious and safe?
-            </p>
-            <p>
-              This was followed by another realization during Chhath Puja—the
-              best snacks were scarce and seasonal. This scarcity and lack of
-              hygiene wasn't just a problem; it was an opportunity to create
-              something better.
-            </p>
+            <div
+              style={{
+                color: "#b95000",
+                fontSize: "10px",
+                fontWeight: "bold",
+              }}
+            >
+              THE BEGINNING
+            </div>
+            <div
+              style={{
+                fontSize: "32px",
+                fontFamily: "Merriweather",
+                fontWeight: "bold",
+              }}
+            >
+              The Spark of an Idea
+            </div>
+            <div
+              style={{
+                fontSize: "12px",
+                paddingLeft: "34%",
+                paddingRight: "34%",
+              }}
+            >
+              <p>
+                The journey of Shuddh Swad began with a powerful, personal
+                experience. Our 16-year-old founder's simple desire for a local
+                thekua turned into a harsh lesson on food hygiene. This single
+                incident sparked a powerful question: Why can't traditional
+                snacks be both delicious and safe?
+              </p>
+              <p>
+                This was followed by another realization during Chhath Puja—the
+                best snacks were scarce and seasonal. This scarcity and lack of
+                hygiene wasn't just a problem; it was an opportunity to create
+                something better.
+              </p>
+            </div>
           </div>
           <div style={{ padding: "50px", backgroundColor: "#fbf9f6" }}>
-            <div>OUR VALUES</div>
-            <div>Our Philosophy of Purity</div>
+            <div
+              style={{
+                color: "#b95000",
+                fontSize: "10px",
+                fontWeight: "bold",
+              }}
+            >
+              OUR VALUES
+            </div>
+            <div
+              style={{
+                fontSize: "32px",
+                fontFamily: "Merriweather",
+                fontWeight: "bold",
+              }}
+            >
+              Our Philosophy of Purity
+            </div>
             <div className="container">
               <div className="row">
                 <div className="col-4">
@@ -221,8 +297,23 @@ function App() {
             </div>
           </div>
           <div style={{ padding: "50px", backgroundColor: "#f2efdd" }}>
-            <div>Join Our Movement</div>
-            <div>
+            <div
+              style={{
+                fontSize: "28px",
+                color: "#b95000",
+                fontWeight: "bold",
+                fontFamily: "Merriweather",
+              }}
+            >
+              Join Our Movement
+            </div>
+            <div
+              style={{
+                fontSize: "14px",
+                paddingLeft: "34%",
+                paddingRight: "34%",
+              }}
+            >
               Join Our Movement We are more than a brand; we are a community
               that believes in dreaming big. Thank you for being a part of our
               story. Share the joy of Shuddh Swad with your friends and family.
