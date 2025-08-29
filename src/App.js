@@ -22,6 +22,12 @@ import vector1 from "./Values/sustainbility.PNG";
 import vector2 from "./Values/Quality.PNG";
 import vector3 from "./Values/health2.png";
 import vector4 from "./Values/map03.png";
+import authentic from "./Values2/authentic.PNG";
+import Available from "./Values2/Available.PNG";
+import Hygiene from "./Values2/Hygiene.PNG";
+import { FaMapMarkerAlt } from "react-icons/fa";
+import { IoCall } from "react-icons/io5";
+import { IoIosMail } from "react-icons/io";
 
 function App() {
   return (
@@ -41,6 +47,10 @@ function App() {
                 style={{
                   height: "20px",
                   width: "20px",
+                  // backgroundColor: "#f2efdd",
+                  // color: "black",
+                  // bsBtnBg: "#f2efdd",
+                  // border: "none",
                 }}
               />
             </a>
@@ -50,6 +60,7 @@ function App() {
                 height: "20px",
                 width: "20px",
                 textAlign: "left !important",
+                marginLeft: "5px",
               }}
             />
             <img src={logo} alt="Logo" className="Logo" />
@@ -272,6 +283,7 @@ function App() {
                 fontSize: "32px",
                 fontFamily: "Merriweather",
                 fontWeight: "bold",
+                paddingBottom: "20px",
               }}
             >
               Our Philosophy of Purity
@@ -279,19 +291,35 @@ function App() {
             <div className="container">
               <div className="row">
                 <div className="col-4">
-                  Authentic Recipes We stay true to the traditions. Our recipes
-                  are passed down through generations, ensuring every bite is a
-                  genuine taste of heritage.
+                  <img
+                    src={authentic}
+                    alt="Authentication"
+                    className="values2"
+                  />
+                  <div className="vtitle">Authentic Recipes </div>
+                  <p>
+                    We stay true to the traditions. Our recipes are passed down
+                    through generations, ensuring every bite is a genuine taste
+                    of heritage.
+                  </p>
                 </div>
                 <div className="col-4">
-                  Authentic Recipes We stay true to the traditions. Our recipes
-                  are passed down through generations, ensuring every bite is a
-                  genuine taste of heritage.
+                  <img src={Hygiene} alt="Hygiene" className="values2" />
+                  <div className="vtitle">Uncompromising Hygiene </div>
+                  <p>
+                    From our kitchen to your home, we maintain the strictest
+                    hygiene standards. Because good taste begins with good
+                    health.
+                  </p>
                 </div>
                 <div className="col-4">
-                  Authentic Recipes We stay true to the traditions. Our recipes
-                  are passed down through generations, ensuring every bite is a
-                  genuine taste of heritage.
+                  <img src={Available} alt="Available" className="values2" />
+                  <div className="vtitle">Available for All </div>
+                  <p>
+                    Great taste shouldn't be seasonal or exclusive. We make our
+                    traditional snacks affordable and available all year round,
+                    for everyone to enjoy.
+                  </p>
                 </div>
               </div>
             </div>
@@ -318,8 +346,56 @@ function App() {
               that believes in dreaming big. Thank you for being a part of our
               story. Share the joy of Shuddh Swad with your friends and family.
             </div>
-            <button>Follow us on Instagram</button>
+            <button className="followBtn">Follow us on Instagram</button>
           </div>
+          <footer>
+            <div className="container">
+              <div className="row">
+                <div className="col-3">
+                  <div>Shuddh Swad</div>
+                  <p style={{ fontSize: "11px", paddingTop: "5px" }}>
+                    Authentic and pure products delivered to your doorstep.
+                    Experience the true taste of tradition.
+                  </p>
+                </div>
+                <div className="col-3">
+                  <div>Quick Links</div>
+                  <p style={{ fontSize: "12px", paddingTop: "5px" }}>
+                    <div>Track Order</div>
+                    <div>Return & Refund Policy</div>
+                    <div>FAQ</div>
+                    <div>Privacy Policy</div>
+                  </p>
+                </div>
+                <div className="col-3">
+                  <div>Company</div>
+                  <p style={{ fontSize: "12px", paddingTop: "5px" }}>
+                    <div>Our Story</div>
+                    <div>Contact Us</div>
+                  </p>
+                </div>
+                <div className="col-3">
+                  <div>Get in Touch</div>
+                  <p style={{ fontSize: "12px", paddingTop: "5px" }}>
+                    <div>
+                      <FaMapMarkerAlt /> Adra, Near DVC More, West Bengal
+                      723121, India.
+                    </div>
+                    <div>
+                      <IoCall /> +91 8016380734
+                    </div>
+                    <div style={{ fontSize: "8px" }}>
+                      Mon - Fri, 10am - 6:30pm
+                    </div>
+                    <div>
+                      <IoIosMail />
+                      contact@shuddhswad.shop
+                    </div>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </footer>
         </div>
       </div>
     </>

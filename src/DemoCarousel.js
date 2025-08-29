@@ -22,6 +22,9 @@ const DemoCarousel = () => {
   return (
     <Carousel
       showArrows={true}
+      autoPlay={true}
+      infiniteLoop={true}
+      interval={2000}
       onChange={onChange}
       onClickItem={onClickItem}
       onClickThumb={onClickThumb}
