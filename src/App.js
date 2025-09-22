@@ -4,11 +4,14 @@ import DemoCarousel from "./DemoCarousel";
 import logo from "./logo.png";
 import { RiMenuLine } from "react-icons/ri";
 import { IoSearchOutline } from "react-icons/io5";
+import { VscAccount } from "react-icons/vsc";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Login from "./Pages/Login.js";
 import { useState } from "react";
 import Home from "./Pages/Home";
 import Orders from "./Pages/Orders";
 import Products from "./Pages/Product";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+// import Header from "./Header.js";
 import Cards from "./Cards";
 import Product1 from "./Products/Product1.png";
 import Product2 from "./Products/Product2.png";
@@ -34,9 +37,9 @@ function App() {
     <>
       <div style={{ backgroundColor: "#f2efdd" }}>
         <Router>
-          <header>
+          {/* <header>
             <a
-              className="btn btn-primary"
+              className="btn"
               data-bs-toggle="offcanvas"
               href="#offcanvasExample"
               role="button"
@@ -47,10 +50,6 @@ function App() {
                 style={{
                   height: "20px",
                   width: "20px",
-                  // backgroundColor: "#f2efdd",
-                  // color: "black",
-                  // bsBtnBg: "#f2efdd",
-                  // border: "none",
                 }}
               />
             </a>
@@ -64,16 +63,26 @@ function App() {
               }}
             />
             <img src={logo} alt="Logo" className="Logo" />
+            <Router>
+              <Routes>
+                <Route path="/" element={<Login />} />
+                <VscAccount
+                  style={{
+                    height: "20px",
+                    width: "20px",
+                  }}
+                />
+              </Routes>
+            </Router>
           </header>
-
-          <Navbar />
+          <Navbar /> */}
           <DemoCarousel />
 
           <div className="main">
             <Routes>
               <Route path="/" exact={true} component={Home} />
               <Route path="/Order" exact={true} component={Orders} />
-              <Route path="/Products" exact={true} component={Products} />{" "}
+              <Route path="/Products" exact={true} component={Products} />
             </Routes>
           </div>
         </Router>
@@ -395,6 +404,7 @@ function App() {
                 </div>
               </div>
             </div>
+            <hr />
           </footer>
         </div>
       </div>
