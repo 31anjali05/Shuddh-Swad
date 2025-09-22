@@ -64,7 +64,7 @@ ul.thumbs.animated{
 }
 .main {
   padding: none !important;
-  display: none;
+
 }
 .title {
   color:#3D081B;
@@ -93,20 +93,20 @@ ul.thumbs.animated{
  
 }
 
-.Product:hover {
+.product:hover {
   -ms-transform: scale(1.1); /* IE 9 */
   -webkit-transform: scale(1.1); /* Safari 3-8 */
   transform: scale(1.1); 
   
 }
-.ProductName {
+.product-name {
   font-family: Proza Libre;
   font-size: 16px;
   color: #3D081B;
   padding-top: 10px;
   padding-bottom: 10px;
 }
-.ProductPrice {
+.product-price {
 padding-bottom: 10px;
 font-size: 16px;
 color: #3D081B;
@@ -124,7 +124,7 @@ color: #3D081B;
 .gx-7{
   --bs-gutter-x: 7rem;
 }
-.Subtitle {
+.subtitle {
   color:#1f2937 ;
   font-weight: bold;
   display: flex;
@@ -132,7 +132,7 @@ color: #3D081B;
   font-size: 22.5px;
   margin-bottom: 20px;
 }
-.Brief{
+.brief{
   color:#4B5563;
   font-size: 13.25px;
   text-align: center;

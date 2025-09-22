@@ -1,0 +1,15 @@
+1) Filename and the component Name initials only starts with capital rest of it should be in small letter.
+2) Extensions of file should also be in small letter.
+3) All the media files should be inside assets folder
+How it should look like 
+assets/images
+assets/icons
+assets/video (GIF included)
+4) The size of components lines should not exceed to 200 lines nearly.
+5) Try to make as nested, Applying css only on single class will not work properly
+6) Css class name should only start with small letter. It should not be in camel case notation. 
+7) Component Name (Function Name / Class Name) should follow camel case notation. (Same as point no. 1).
+8) Try to create seperate css files. Not mandatory to create seperate css file for every component, But try to
+ seperate out atleast for Big components.
+9) Use Link component from react router instead of anchor tag. Why? Because using anchor tag will reload the 
+whole page, but Link component will only load mandatory component.

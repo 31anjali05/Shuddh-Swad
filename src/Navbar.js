@@ -1,80 +1,81 @@
+import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <>
       {/* <div className={show ? "sidenav active" : "d-none"}>
-        <ul>
-          <li>
-            <a href="/">Home</a>
-          </li>
-          <li>
-            <a href="/">Orders</a>
-          </li>
-          <li>
-            <a href="/">Track your order</a>
-          </li>
-          <li>
-            <a href="/">Products</a>
-          </li>
-          <li>
-            <a href="/">Return Policy</a>
-          </li>
-          <li>
-            <a href="/">About Us</a>
-          </li>
-          <li>
-            <a href="/">Contact Us</a>
-          </li>
-          <li>
-            <a href="/">Shipping Policy</a>
-          </li>
-          <li>
-            <a href="/">Terms of Service</a>
-          </li>
-        </ul>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/order">Orders</Link>
+            </li>
+            <li>
+              <Link to="/track">Track your order</Link>
+            </li>
+            <li>
+              <Link to="/products">Products</Link>
+            </li>
+            <li>
+              <Link to="/return-policy">Return Policy</Link>
+            </li>
+            <li>
+              <Link to="/about">About Us</Link>
+            </li>
+            <li>
+              <Link to="/contact">Contact Us</Link>
+            </li>
+            <li>
+              <Link to="/shipping-policy">Shipping Policy</Link>
+            </li>
+            <li>
+              <Link to="/terms">Terms of Service</Link>
+            </li>
+          </ul>
       </div> */}
 
       <div
-        class="offcanvas offcanvas-start"
-        tabindex="-1"
+        className="offcanvas offcanvas-start"
+        tabIndex="-1"
         id="offcanvasExample"
         aria-labelledby="offcanvasExampleLabel"
       >
-        <div class="offcanvas-header">
+        <div className="offcanvas-header">
           <button
             type="button"
-            class="btn-close text-reset"
+            className="btn-close text-reset"
             data-bs-dismiss="offcanvas"
             aria-label="Close"
           ></button>
         </div>
-        <div class="offcanvas-body">
+        <div className="offcanvas-body">
           <ul>
             <li>
-              <a href="/">Home</a>
+              <Link to="/">Home</Link>
             </li>
             <li>
-              <a href="/">Orders</a>
+              <Link to="/order">Orders</Link>
             </li>
             <li>
-              <a href="/">Track your order</a>
+              <Link to="/">Track your order</Link>
             </li>
             <li>
-              <a href="/">Products</a>
+              <Link to="/products">Products</Link>
             </li>
             <li>
-              <a href="/">Return Policy</a>
+              <Link to="/">Return Policy</Link>
             </li>
             <li>
-              <a href="/">About Us</a>
+              <Link to="/">About Us</Link>
             </li>
             <li>
-              <a href="/">Contact Us</a>
+              <Link to="/">Contact Us</Link>
             </li>
             <li>
-              <a href="/">Shipping Policy</a>
+              <Link to="/">Shipping Policy</Link>
             </li>
             <li>
-              <a href="/">Terms of Service</a>
+              <Link to="/">Terms of Service</Link>
             </li>
           </ul>
         </div>

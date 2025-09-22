@@ -6,11 +6,8 @@ import Banner2 from "./BANNERS/Banner2.PNG";
 import Banner3 from "./BANNERS/Banner-3.PNG";
 import Banner4 from "./BANNERS/Banner-4.PNG";
 import Banner5 from "./BANNERS/Banner-5.jpg";
-const DemoCarousel = () => {
-  const onChange = (index) => {
-    console.log("Slide changed to:", index);
-  };
 
+const DemoCarousel = () => {
   const onClickItem = (index) => {
     console.log("Clicked item:", index);
   };
@@ -25,7 +22,6 @@ const DemoCarousel = () => {
       autoPlay={true}
       infiniteLoop={true}
       interval={2000}
-      onChange={onChange}
       onClickItem={onClickItem}
       onClickThumb={onClickThumb}
     >

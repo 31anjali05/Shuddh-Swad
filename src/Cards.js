@@ -10,15 +10,15 @@ const Cards = ({ product, name, price, prevPrice }) => {
           src={product}
           style={{ width: "auto", height: "447px", borderRadius: "10px" }}
           alt={name}
-          className="Product"
+          className="product"
         />
         <div
           className="container"
           style={{ backgroundColor: "#f2efdd", padding: "0" }}
         >
           <h4>
-            <div className="ProductName">{name}</div>
-            <div className="ProductPrice">
+            <div className="product-name">{name}</div>
+            <div className="product-price">
               <span>
                 <del>{prevPrice}</del>
               </span>{" "}
