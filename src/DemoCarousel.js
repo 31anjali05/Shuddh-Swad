@@ -1,11 +1,11 @@
 import React from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // carousel styles
-import Banner1 from "./BANNERS/Banner-1.PNG";
-import Banner2 from "./BANNERS/Banner2.PNG";
-import Banner3 from "./BANNERS/Banner-3.PNG";
-import Banner4 from "./BANNERS/Banner-4.PNG";
-import Banner5 from "./BANNERS/Banner-5.jpg";
+import Banner1 from "./Assets/Banner-1.PNG";
+import Banner2 from "./Assets/Banner2.PNG";
+import Banner3 from "./Assets/Banner-3.PNG";
+import Banner4 from "./Assets/Banner-4.PNG";
+import Banner5 from "./Assets/Banner-5.jpg";
 
 const DemoCarousel = () => {
   const onClickItem = (index) => {

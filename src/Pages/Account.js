@@ -1,27 +1,48 @@
-import "./Login.css";
-import React, { useState } from "react";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
+import { useState } from "react";
 import Form from "react-bootstrap/Form";
-import { Link } from "react-router-dom";
-// import Account from "./Account";
 
-function Login() {
+function Account() {
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log("Login attempted with:", { email, password });
   };
+
   return (
     <>
       <div style={{ backgroundColor: "#f2efdd" }}>
-        <div className="container loginPage">
+        <div className="container account">
           <div className="row">
             <div className="col-4"></div>
             <div className="col-4">
-              {" "}
-              <p style={{ fontSize: "45px" }}>Login</p>
+              <p style={{ fontSize: "45px" }}>Create Account</p>
               <form onSubmit={handleSubmit}>
+                <FloatingLabel controlId="floatingInput" label="First Name">
+                  <Form.Control
+                    type="text"
+                    id="firstName"
+                    value={firstName}
+                    onChange={(e) => setFirstName(e.target.value)}
+                    placeholder="First Name"
+                    required
+                    className="field"
+                  />
+                </FloatingLabel>
+                <FloatingLabel controlId="floatingInput" label="Last Name">
+                  <Form.Control
+                    type="text"
+                    id="lastName"
+                    value={lastName}
+                    onChange={(e) => setLastName(e.target.value)}
+                    placeholder="Last Name"
+                    required
+                    className="field"
+                  />
+                </FloatingLabel>
                 <div>
                   <FloatingLabel controlId="floatingInput" label="Email">
                     <Form.Control
@@ -48,25 +69,9 @@ function Login() {
                     />
                   </FloatingLabel>
                 </div>
-                <div>
-                  <ul>
-                    <li>
-                      <Link to="/" className="resetpsd">
-                        Forgot your password?
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
                 <button className="signInBtn" type="submit">
-                  Sign in
+                  Create
                 </button>
-                <div>
-                  <ul>
-                    <li>
-                      <Link to="/account">Create Account</Link>
-                    </li>
-                  </ul>
-                </div>
               </form>
             </div>
             <div className="col-4"></div>
@@ -76,5 +81,4 @@ function Login() {
     </>
   );
 }
-
-export default Login;
+export default Account;

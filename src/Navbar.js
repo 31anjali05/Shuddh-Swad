@@ -2,38 +2,7 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <>
-      {/* <div className={show ? "sidenav active" : "d-none"}>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/order">Orders</Link>
-            </li>
-            <li>
-              <Link to="/track">Track your order</Link>
-            </li>
-            <li>
-              <Link to="/products">Products</Link>
-            </li>
-            <li>
-              <Link to="/return-policy">Return Policy</Link>
-            </li>
-            <li>
-              <Link to="/about">About Us</Link>
-            </li>
-            <li>
-              <Link to="/contact">Contact Us</Link>
-            </li>
-            <li>
-              <Link to="/shipping-policy">Shipping Policy</Link>
-            </li>
-            <li>
-              <Link to="/terms">Terms of Service</Link>
-            </li>
-          </ul>
-      </div> */}
-
+      {" "}
       <div
         className="offcanvas offcanvas-start"
         tabIndex="-1"

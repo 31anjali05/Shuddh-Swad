@@ -6,6 +6,7 @@ import Home from "./Pages/Home";
 import Orders from "./Pages/Orders";
 import Products from "./Pages/Product";
 import Header from "./Header.js";
+import Account from "./Pages/Account.js";
 
 function App() {
   return (
@@ -13,14 +14,13 @@ function App() {
       <div style={{ backgroundColor: "#f2efdd" }}>
         <Header />
         <div className="main">
-
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/order" element={<Orders />} />
             <Route path="/products" element={<Products />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/account" element={<Account />} />
           </Routes>
-
         </div>
         <Navbar />
       </div>

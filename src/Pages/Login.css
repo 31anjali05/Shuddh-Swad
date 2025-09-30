@@ -4,16 +4,47 @@
     border-color: #3d081b;
     border-radius: 15px;
     border-bottom-width: 5px;
-    width: 35%;
     background-color: #f2efdd;
    
-    }
+}
 
-    .container .signInBtn {
-background-color:#3d081b ;
-border: none;
-color: #f2efdd;
-margin-top: 20px;
-padding:15px 35px;
-border-radius: 30px;
-    }
+.container .signInBtn {
+    background-color:#3d081b ;
+    border: none;
+    color: #f2efdd;
+    margin-top: 20px;
+    padding:15px 35px;
+    border-radius: 30px;
+ }
+ .container .signInBtn:hover {
+  background-color: #5a0c29;
+  cursor: pointer;
+}
+
+/* form .form-floating input.field{
+    width:auto;
+} */
+.container.loginPage{
+    text-align: center;
+    color: #3d081b;
+    height: 710px;
+    /* display: flex;
+    align-items: center;      /* center vertically */
+    /* flex-direction: column;  (unnessecary)*/ 
+}
+ul{
+    padding-left: 0 !important;
+}
+.resetpsd{
+    text-align: left !important;
+}
+
+
+
+/* CSS for Create Account Page (Account.js)*/
+.container.account{
+    text-align: center;
+    color: #3d081b;
+    height: 710px;
+
+}
