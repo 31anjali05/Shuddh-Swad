@@ -15,7 +15,7 @@ function Account() {
   return (
     <>
       <div style={{ backgroundColor: "#f2efdd" }}>
-        <div className="container account">
+        <div className="container1 account">
           <div className="row">
             <div className="col-4"></div>
             <div className="col-4">

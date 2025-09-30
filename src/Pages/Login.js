@@ -15,11 +15,9 @@ function Login() {
   return (
     <>
       <div style={{ backgroundColor: "#f2efdd" }}>
-        <div className="container loginPage">
-          <div className="row">
-            <div className="col-4"></div>
-            <div className="col-4">
-              {" "}
+        <div className="container1 loginPage">
+       
+          
               <p style={{ fontSize: "45px" }}>Login</p>
               <form onSubmit={handleSubmit}>
                 <div>
@@ -69,10 +67,7 @@ function Login() {
                 </div>
               </form>
             </div>
-            <div className="col-4"></div>
-          </div>
-        </div>
-      </div>
+     </div>
     </>
   );
 }

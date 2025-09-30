@@ -1,4 +1,4 @@
-.container .field{
+.container1 .field{
     padding: 10px 10px;
     margin-top: 20px;
     border-color: #3d081b;
@@ -8,7 +8,7 @@
    
 }
 
-.container .signInBtn {
+.container1 .signInBtn {
     background-color:#3d081b ;
     border: none;
     color: #f2efdd;
@@ -16,7 +16,7 @@
     padding:15px 35px;
     border-radius: 30px;
  }
- .container .signInBtn:hover {
+ .container1 .signInBtn:hover {
   background-color: #5a0c29;
   cursor: pointer;
 }
@@ -24,10 +24,9 @@
 /* form .form-floating input.field{
     width:auto;
 } */
-.container.loginPage{
+.container1.loginPage{
     text-align: center;
     color: #3d081b;
-    height: 710px;
     /* display: flex;
     align-items: center;      /* center vertically */
     /* flex-direction: column;  (unnessecary)*/ 
@@ -45,6 +44,13 @@ ul{
 .container.account{
     text-align: center;
     color: #3d081b;
-    height: 710px;
+}
 
+.container1{
+    .form-floating{
+        width: 280px;
+    }
+    ul li a{
+        padding-left: 0;
+    }
 }

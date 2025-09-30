@@ -18,8 +18,9 @@ const Header = () => {
   return (
     <>
       <div style={{ backgroundColor: "#f2efdd" }}>
-        <header>
-          <a
+        <header className="d-flex justify-content-between">
+         <div>
+           <a
             className="btn"
             data-bs-toggle="offcanvas"
             href="#offcanvasExample"
@@ -42,6 +43,7 @@ const Header = () => {
               marginLeft: "5px",
             }}
           />
+          </div>
           <img src={logo} alt="Logo" className="Logo" />
           <VscAccount
             style={{
