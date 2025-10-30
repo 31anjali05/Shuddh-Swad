@@ -13,7 +13,7 @@ function App() {
     <>
       <div style={{ backgroundColor: "#f2efdd" }}>
         <Header />
-        <div className="main">
+        <div className="main ">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/order" element={<Orders />} />

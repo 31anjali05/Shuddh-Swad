@@ -27,7 +27,7 @@
 .container.loginPage{
     text-align: center;
     color: #3d081b;
-    height: 710px;
+    
     /* display: flex;
     align-items: center;      /* center vertically */
     /* flex-direction: column;  (unnessecary)*/ 
@@ -45,6 +45,5 @@ ul{
 .container.account{
     text-align: center;
     color: #3d081b;
-    height: 710px;
-
+   
 }

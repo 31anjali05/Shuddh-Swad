@@ -10,16 +10,33 @@ function Login() {
   const [password, setPassword] = useState("");
   const handleSubmit = (event) => {
     event.preventDefault();
+    // create request object => {header => {cookies,content-type:application/json},body=>{main data},method =>{POst}}
+    // fetch (url,requestobj) => {response} => {error}
+    const requestdata = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email: email,
+        password: password,
+      }),
+    };
+    fetch("http://127.0.0.1:8000/login/", requestdata)
+      .then((response) => response.json())
+      .then((data) => console.log(data));
+
     console.log("Login attempted with:", { email, password });
   };
   return (
     <>
-      <div style={{ backgroundColor: "#f2efdd" }}>
-        <div className="container loginPage">
-          <div className="row">
-            <div className="col-4"></div>
-            <div className="col-4">
-              {" "}
+      <div
+        className="d-flex justify-content-center"
+        style={{ backgroundColor: "#f2efdd" }}
+      >
+        <div className="loginPage">
+          <div>
+            <div>
               <p style={{ fontSize: "45px" }}>Login</p>
               <form onSubmit={handleSubmit}>
                 <div>
@@ -69,7 +86,6 @@ function Login() {
                 </div>
               </form>
             </div>
-            <div className="col-4"></div>
           </div>
         </div>
       </div>
