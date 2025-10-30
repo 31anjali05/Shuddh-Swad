@@ -9,7 +9,31 @@ function Account() {
   const [password, setPassword] = useState("");
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log("Login attempted with:", { email, password });
+
+    const requestaccount = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        first_name: firstName,
+        last_name: lastName,
+        email: email,
+        password: password,
+        phoneno: "9999999901",
+        alternateno: "0032762534",
+      }),
+    };
+    fetch("http://127.0.0.1:8000/signup/", requestaccount)
+      .then((response) => response.json())
+      .then((data) => console.log(data));
+
+    console.log("Signup attempted with:", {
+      firstName,
+      lastName,
+      email,
+      password,
+    });
   };
 
   return (

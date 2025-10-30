@@ -18,8 +18,15 @@ import { FaMapMarkerAlt } from "react-icons/fa";
 import { IoCall } from "react-icons/io5";
 import { IoIosMail } from "react-icons/io";
 import DemoCarousel from "../DemoCarousel";
+import { useEffect } from "react";
 
 const Home = () => {
+  useEffect(() => {
+    fetch("http://127.0.0.1:8000/users/")
+      .then((response) => response.json())
+      .then((data) => console.log(data));
+  }, []);
+
   return (
     <div>
       <DemoCarousel />
